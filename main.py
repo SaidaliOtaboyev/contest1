@@ -17,8 +17,7 @@ def func():
 def funx(n=None):
     print("I am ready to do serious stuff")
     max_val = float('-inf')
-    
-  
+
     if n is None:
         n = random.randint(10, 751)
 
