@@ -1,3 +1,3 @@
 
-def kwargsAcceptFun(**kwargs):
-    return kwargs
+def kwargsAcceptFun(**argumentss):
+    return argumentss
