@@ -1,4 +1,5 @@
 #Saidali
+from collections import defaultdict
 def typeBasedTransformer(**argumentdetails):
     converteddata = {} 
     
@@ -14,9 +15,11 @@ def typeBasedTransformer(**argumentdetails):
         elif isinstance(data, (list, tuple)):
             converteddata[identifier] = data[::-1]  
             
-        elif isinstance(data, dict):
-            converteddata[identifier] = {v: k for k, v in data.items()}  
-            
+      elif isinstance(data, dict):
+            temp_dict = defaultdict(list)
+            for k, v in data.items():
+                temp_dict[v].append(k)  
+            converteddata[identifier] = dict(temp_dict) 
         else:
             converteddata[identifier] = data  
     
